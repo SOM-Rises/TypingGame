@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    min-height: 100vh;
+    background-color: #17a2b8;
+}
+
+.wraper{
+    border: 1px solid rgb(212, 211, 211);
+    border-radius: 10px;
+    width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    
+}
+
+.wraper .input-field{
+    z-index: -999;
+    opacity: 0;
+    position: absolute;
+}
+
+.container .typing-test {
+max-height: 225px;
+overflow-y:  auto;
+
+}
+
+.typing-test p{
+    text-align: justify;
+    word-break: break-all;
+    letter-spacing: 1px;
+}
+
+.typing-test p .correct{
+    color: rgb(61, 243, 61);
+}
+
+.typing-test p .incorrect{
+    color: rgb(255, 0, 0);
+    background-color: rgb(230, 134, 134);
+    border-radius: 5px;
+    outline: 1px solid white;
+    
+}
+.typing-test p span{
+    position: relative;
+}
+.typing-test p span.active{
+    color: #17a2b8;
+}
+
+.typing-test p span.active::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    height: 2px;
+    background: #17a2b8;
+    width: 100%;
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink{
+   50%{
+    opacity: 1;
+   }
+}
+
+
+.typing-test::-webkit-scrollbar{
+    width: 0;
+}
+
+.wraper .container{
+    padding: 13px 20px 0;
+    border: 2px solid rgb(201, 201, 201);
+    border-radius: 10px;
+    font-weight: 400;
+    /* background-color: rgb(202, 55, 55); */
+    
+    
+}
+
+.results{
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(141, 138, 138);
+    align-items: center;
+    /* background-color: rgb(228, 52, 52); */
+}
+
+.results b{
+    font-weight: 500;
+}
+
+.results div:not(:first-child) span{
+    font-weight: 500;
+}
+
+.results div{
+    display: flex;
+}
+
+.results div:not(:first-child){
+    border-left: 1px solid rgb(141, 138, 138);
+    padding-left: 6px;
+}
+
+.results button{
+    border: none;
+    background-color: #17a2b8;
+    color: white;
+    width: 105px;
+    padding: 8px 0px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+
+
+.results span{
+    margin-left: 8px;
+}
